@@ -7,10 +7,10 @@ public class StudentsCRUD : IStudentsCRUD
 {
     private static readonly List<Student> Students = new()
    {
-      new Student { studentId = 1, name = "Douglas", email = "douglas.cic@uesc.br" },
-      new Student { studentId = 2, name = "Estevão", email = "estevao.cic@uesc.br" },
-      new Student { studentId = 3, name = "Gabriel", email = "gabriel.cic@uesc.br" },
-      new Student { studentId = 4, name = "Gabriela", email = "gabriela.cic@uesc.br" }
+      new Student { StudentId = 1, Name = "Douglas", Email = "douglas.cic@uesc.br" },
+      new Student { StudentId = 2, Name = "Estevão", Email = "estevao.cic@uesc.br" },
+      new Student { StudentId = 3, Name = "Gabriel", Email = "gabriel.cic@uesc.br" },
+      new Student { StudentId = 4, Name = "Gabriela", Email = "gabriela.cic@uesc.br" }
    };
     public void Create(Student entity)
     {
@@ -19,7 +19,7 @@ public class StudentsCRUD : IStudentsCRUD
 
     public void Delete(Student entity)
     {   
-        var student = this.Find(entity.studentId);
+        var student = this.Find(entity.StudentId);
         if(student is  not null)
             Students.Remove(student);
     }
@@ -37,18 +37,18 @@ public class StudentsCRUD : IStudentsCRUD
 
     public void Update(Student entity)
     {
-        var student = this.Find(entity.studentId);
-        if(student is not null) student.name = entity.name;
+        var student = this.Find(entity.StudentId);
+        if(student is not null) student.Name = entity.Name;
     }
 
-    private Student? Find(string email)
+    private Student? Find(string Email)
     {
-        return Students.FirstOrDefault(x => x.email == email);
+        return Students.FirstOrDefault(x => x.Email == Email);
     }
 
     private Student? Find(int id)
     {
-        return Students.FirstOrDefault(x => x.studentId == id);
+        return Students.FirstOrDefault(x => x.StudentId == id);
     }
 
 }

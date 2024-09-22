@@ -5,11 +5,11 @@ namespace UescColcicAPI.Core;
 
 public class Student
 {
-   public int studentId {get; set;}
-   public string registration {get; set;}
-   public string name {get; set;} 
-   public string email {get; set;}
-   public string course {get; set;}
-   public string bio {get; set;}
-   public List<Skill> skills { get; set; } = new List<Skill>();
+   public int StudentId {get; set;}
+   public string Registration {get; set;}
+   public string Name {get; set;} 
+   public string Email {get; set;}
+   public string Course {get; set;}
+   public string Bio {get; set;}
+   public List<Skill> Skills { get; set; } = new List<Skill>();
 }

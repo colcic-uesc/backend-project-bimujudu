@@ -7,8 +7,10 @@ public class SkillsCRUD : ISkillsCRUD
 {
     private static readonly List<Skill> Skills = new()
     {
-        new Skill { skillId = 1, title = "blablabla", description = "AAAAAAAAAAAAAAAAAAAAAAAA" },
-        new Skill { skillId = 2, title = "blablabla",  description = "bbbbbbbbbbbbbbbbbbbbbbbb" }
+        new Skill { SkillId = 1, Title = "Python", Description = "Proficiência em programação com linguagem Python." },
+        new Skill { SkillId = 2, Title = "Django",  Description = "Conhecimento em backend utilizando framework Django." },
+        new Skill { SkillId = 3, Title = "MySQL", Description = "Proficiência em consulta de dados com MySQL." },
+        new Skill { SkillId = 4, Title = "Machine Learning.",  Description = "Conhecimento de algoritmos de Machine Learning." }
     };
 
     public void Create(Skill entity)
@@ -18,7 +20,7 @@ public class SkillsCRUD : ISkillsCRUD
 
     public void Delete(Skill entity)
     {
-        var skill = this.Find(entity.skillId);
+        var skill = this.Find(entity.SkillId);
         if (skill is not null)
             Skills.Remove(skill);
     }
@@ -36,17 +38,17 @@ public class SkillsCRUD : ISkillsCRUD
 
     public void Update(Skill entity)
     {
-        var skill = this.Find(entity.skillId);
+        var skill = this.Find(entity.SkillId);
         if (skill is not null)
         {
-            skill.title = entity.title;
-            skill.description = entity.description;
+            skill.Title = entity.Title;
+            skill.Description = entity.Description;
         }
     }
 
 
     private Skill? Find(int id)
     {
-        return Skills.FirstOrDefault(x => x.skillId == id);
+        return Skills.FirstOrDefault(x => x.SkillId == id);
     }
 }

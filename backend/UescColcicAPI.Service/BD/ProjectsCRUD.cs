@@ -8,8 +8,10 @@ public class ProjectsCRUD : IProjectsCRUD
 {
     private static readonly List<Project> Projects = new()
     {
-        new Project { projectId = 1, title = "IA na Educação", description = "Projeto de IA aplicado a educação", type = "Pesquisa", startDate = DateTime.Now, endDate = DateTime.Now.AddYears(1) },
-        new Project { projectId = 2, title = "Imagem e Ação", description = "Pesquisa sobre processamento de imagens", type = "Pesquisa", startDate = DateTime.Now, endDate = DateTime.Now.AddYears(1) }
+        new Project { ProjectId = 1, Title = "IA na Educação", Description = "Projeto de IA aplicado a educação", Type = "Pesquisa", StartDate = DateTime.Now, EndDate = DateTime.Now.AddYears(1) },
+        new Project { ProjectId = 2, Title = "Imagem e Ação", Description = "Pesquisa sobre processamento de imagens", Type = "Pesquisa", StartDate = DateTime.Now, EndDate = DateTime.Now.AddYears(1) },
+        new Project { ProjectId = 3, Title = "Campeonato de Programação Universitário", Description = "Recrutamento para competições de programação", Type = "Projeto", StartDate = DateTime.Now, EndDate = DateTime.Now.AddYears(1) },
+        new Project { ProjectId = 4, Title = "Monitoria de Programação", Description = "Monitoria nas disciplinas de Linguagem de Programação", Type = "Monitoria", StartDate = DateTime.Now, EndDate = DateTime.Now.AddYears(1) }
     };
 
     public void Create(Project entity)
@@ -19,7 +21,7 @@ public class ProjectsCRUD : IProjectsCRUD
 
     public void Delete(Project entity)
     {
-        var project = this.Find(entity.projectId);
+        var project = this.Find(entity.ProjectId);
         if (project is not null)
             Projects.Remove(project);
     }
@@ -37,24 +39,24 @@ public class ProjectsCRUD : IProjectsCRUD
 
     public void Update(Project entity)
     {
-        var project = this.Find(entity.projectId);
+        var project = this.Find(entity.ProjectId);
         if (project is not null)
         {
-            project.title = entity.title;
-            project.description = entity.description;
-            project.type = entity.type;
-            project.startDate = entity.startDate;
-            project.endDate = entity.endDate;
+            project.Title = entity.Title;
+            project.Description = entity.Description;
+            project.Type = entity.Type;
+            project.StartDate = entity.StartDate;
+            project.EndDate = entity.EndDate;
         }
     }
 
-    private Project? Find(string title)
+    private Project? Find(string Title)
     {
-        return Projects.FirstOrDefault(x => x.title == title);
+        return Projects.FirstOrDefault(x => x.Title == Title);
     }
 
     private Project? Find(int id)
     {
-        return Projects.FirstOrDefault(x => x.projectId == id);
+        return Projects.FirstOrDefault(x => x.ProjectId == id);
     }
 }

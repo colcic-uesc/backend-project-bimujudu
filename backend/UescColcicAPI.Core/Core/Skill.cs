@@ -4,7 +4,7 @@ namespace UescColcicAPI.Core;
 
 public class Skill
 {
-   public int skillId {get; set;}
-   public string title {get; set;}
-   public string description {get; set;} 
+   public int SkillId {get; set;}
+   public string Title {get; set;}
+   public string Description {get; set;} 
 }

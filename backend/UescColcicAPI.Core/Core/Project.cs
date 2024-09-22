@@ -5,15 +5,15 @@ namespace UescColcicAPI.Core;
 
  public class Project
     {
-        public int projectId { get; set; }
-        public string title { get; set; }
-        public string description { get; set; }
-        public string type { get; set; }
-        public DateTime startDate { get; set; }
-        public DateTime endDate { get; set; }
+        public int ProjectId { get; set; }
+        public string Title { get; set; }
+        public string Description { get; set; }
+        public string Type { get; set; }
+        public DateTime StartDate { get; set; }
+        public DateTime EndDate { get; set; }
 
-        public List<Skill> skills { get; set; } = new List<Skill>();
+        public List<Skill> Skills { get; set; } = new List<Skill>();
 
-        public List<Professor> professors { get; set; } = new List<Professor>();
+        public List<Professor> Professors { get; set; } = new List<Professor>();
     }
 
