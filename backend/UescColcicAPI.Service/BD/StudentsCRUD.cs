@@ -41,7 +41,10 @@ public class StudentsCRUD : IStudentsCRUD
         if (student is not null)
         {
             student.Name = entity.Name;
+            student.Registration = entity.Registration;
             student.Email = entity.Email;
+            student.Course = entity.Course;
+            student.Bio = entity.Bio;
 
             if (entity.Skills is not null && entity.Skills.Any(x => x.SkillId != 0)) // Se a lista de habilidades não for vazia e houver habilidades
             {
