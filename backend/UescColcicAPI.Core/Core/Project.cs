@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace UescColcicAPI.Core;
 
- public class Project
+public class Project
 {
     public int ProjectId { get; set; }
     public string Title { get; set; }
@@ -14,7 +14,7 @@ namespace UescColcicAPI.Core;
 
     public List<Skill> Skills { get; set; } = new List<Skill>();
 
-    public int ProfessorId { get; set; } 
+    public int ProfessorId { get; set; }
 
 }
 

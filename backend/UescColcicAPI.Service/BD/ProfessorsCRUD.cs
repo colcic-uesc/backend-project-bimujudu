@@ -9,7 +9,7 @@ public class ProfessorsCRUD : IProfessorsCRUD
     {
         new Professor { ProfessorId = 1, Name = "Helder", Email = "helder@uesc.br", Department = "Computação", Bio = "Especialista em Web." },
         new Professor { ProfessorId = 2, Name = "Otacilio", Email = "ota@uesc.br", Department = "Computação", Bio = "Especialista em Algoritmos." },
-        new Professor { ProfessorId = 3, Name = "Matheus", Email = "matheus@uesc.br", Department = "Engenharia de produção", Bio = "Especialista em Máquinas Elétricas." },
+        new Professor { ProfessorId = 3, Name = "Hamilton", Email = "hamilton@uesc.br", Department = "Computação", Bio = "Especialista em Algoritmos." },
         new Professor { ProfessorId = 4, Name = "Vânia", Email = "vania@uesc.br", Department = "Computação", Bio = "Especialista em Computação Gráfica." }
     };
 
