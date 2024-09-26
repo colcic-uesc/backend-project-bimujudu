@@ -14,7 +14,6 @@ public class Project
 
     public List<Skill> Skills { get; set; } = new List<Skill>();
 
-    public int ProfessorId { get; set; }
 
 }
 

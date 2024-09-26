@@ -15,14 +15,43 @@ public class SkillsCRUD : ISkillsCRUD
 
     public void Create(Skill entity)
     {
-        Skills.Add(entity);
+        var skill = this.Find(entity.SkillId);
+        if(skill is null)
+            Skills.Add(entity);
     }
 
     public void Delete(Skill entity)
     {
+        StudentsCRUD studentsCRUD = new(); 
+        var students = studentsCRUD.ReadAll();
+        ProjectsCRUD projectsCRUD = new();
+        var projects = projectsCRUD.ReadAll();
         var skill = this.Find(entity.SkillId);
-        if (skill is not null)
-            Skills.Remove(skill);
+
+        if (skill is not null){
+             // Remover a skill da lista de cada estudante
+                foreach (var student in students)
+                {
+                    if (student.Skills != null && student.Skills.Any(s => s.SkillId == entity.SkillId))
+                    {
+                        // Remove a skill da lista de skills do estudante
+                        student.Skills.RemoveAll(s => s.SkillId == entity.SkillId);
+                    }
+                }
+
+                //Remover a skill da lista de cada projeto
+                foreach (var project in projects)
+                {
+                    if (project.Skills != null && project.Skills.Any(s => s.SkillId == entity.SkillId))
+                    {
+                        // Remove a skill da lista de skills do projeto
+                        project.Skills.RemoveAll(s => s.SkillId == entity.SkillId);
+                    }
+                }
+                //Remover a skill da lista de skills principal
+                Skills.Remove(skill);
+        }
+        
     }
 
     public IEnumerable<Skill> ReadAll()
