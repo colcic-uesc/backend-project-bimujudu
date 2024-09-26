@@ -52,4 +52,21 @@ public class ProfessorsController : ControllerBase
     {
         _professorsCRUD.Delete(entity);
     }
+
+    [HttpPost(Name = "PostProfessor")]
+    public IActionResult Create([FromBody] Professor professor)
+    {
+        _professorsCRUD.Create(professor);
+        return CreatedAtAction(nameof(Get), new { id = professor.ProfessorId }, professor);
+    }
+
+    [HttpPost("{professorId}/Projects", Name = "AddProjectToProfessor")]
+    public void AddProjectToProfessor(int professorID, Project[] entity){
+            _professorsCRUD.AddProjectToProfessor(professorID, entity);
+    }
+
+    [HttpDelete("{professorId}/Projects", Name = "DeleteProjectToProfessor")]
+    public void DeleteProjectToProfessor(int professorID, Project[] entity){
+        _professorsCRUD.DeleteProjectToProfessor(professorID, entity);
+    }
 }

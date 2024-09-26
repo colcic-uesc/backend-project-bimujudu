@@ -24,7 +24,7 @@ namespace UescColcicAPI.Controllers;
             return _studentsCRUD.ReadAll();
         }
 
-        [HttpGet("{studentid}", Name = "GetStudent")]
+        [HttpGet("{studentId}", Name = "GetStudent")]
         public ActionResult<Student> Get(int id)
         {
             try
@@ -51,7 +51,24 @@ namespace UescColcicAPI.Controllers;
 
         [HttpDelete(Name = "DeleteStudent")]
         public void Delete(Student entity)
-        {
+        {   
             _studentsCRUD.Delete(entity);
+        }
+
+        [HttpPost(Name = "PostStudent")]
+        public IActionResult Create([FromBody] Student student)
+        {
+            _studentsCRUD.Create(student);
+            return CreatedAtAction(nameof(Get), new { id = student.StudentId }, student);
+        }
+
+        [HttpPost("{studentId}/Skills", Name = "AddSkillToStudent")]
+        public void AddSkillToStudent(int id, Skill[] entity){
+            _studentsCRUD.AddSkillToStudent(id, entity);
+        }
+
+        [HttpDelete("{studentId}/Skills", Name = "DeleteSkillToStudent")]
+        public void DeleteSkillToStudent(int id, Skill[] entity){
+            _studentsCRUD.DeleteSkillToStudent(id, entity);
         }
     }

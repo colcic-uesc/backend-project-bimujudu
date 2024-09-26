@@ -52,4 +52,21 @@ public class ProjectsController : ControllerBase
     {
         _projectsCRUD.Delete(entity);
     }
+
+    [HttpPost(Name = "PostProject")]
+    public IActionResult Create([FromBody] Project project)
+    {
+        _projectsCRUD.Create(project);
+        return CreatedAtAction(nameof(Get), new { id = project.ProjectId }, project);
+    }
+
+    [HttpPost("{projectId}/Skills", Name = "AddSkillToProject")]
+    public void AddSkillToProject(int id, Skill[] entity){
+            _projectsCRUD.AddSkillToProject(id, entity);
+    }
+
+    [HttpDelete("{projectId}/Skills", Name = "DeleteSkillToProject")]
+    public void DeleteSkillToProject(int id, Skill[] entity){
+        _projectsCRUD.DeleteSkillToProject(id, entity);
+    }
 }

@@ -52,4 +52,11 @@ public class SkillsController : ControllerBase
     {
         _skillsCRUD.Delete(entity);
     }
+
+    [HttpPost(Name = "PostSkill")]
+    public IActionResult Create([FromBody] Skill skill)
+    {
+        _skillsCRUD.Create(skill);
+        return CreatedAtAction(nameof(Get), new { id = skill.SkillId }, skill);
+    }
 }
