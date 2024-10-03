@@ -1,0 +1,12 @@
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI.Core\bin\Debug\net8.0\UescColcicAPI.Core.deps.json
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI.Core\bin\Debug\net8.0\UescColcicAPI.Core.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI.Core\bin\Debug\net8.0\UescColcicAPI.Core.pdb
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.AssemblyInfoInputs.cache
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.AssemblyInfo.cs
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.csproj.CoreCompileInputs.cache
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.sourcelink.json
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\refint\UescColcicAPI.Core.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.pdb
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\ref\UescColcicAPI.Core.dll
