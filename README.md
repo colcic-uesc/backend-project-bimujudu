@@ -1,5 +1,6 @@
 #  UescColcicAPI
-﻿## backend-project-bimujudu
+﻿
+ ## backend-project-bimujudu
 
 Este é o repositório do projeto UescColcicAPI, uma API desenvolvida em .NET para gerenciar projetos, professores, habilidades e estudantes.
 
@@ -7,7 +8,7 @@ Este é o repositório do projeto UescColcicAPI, uma API desenvolvida em .NET pa
 
 - .NET 8.0
 
-## Configuração
+ ## Configuração
 
 1. Clone o repositório:
     ```sh
@@ -24,7 +25,7 @@ Este é o repositório do projeto UescColcicAPI, uma API desenvolvida em .NET pa
     dotnet ef database update --project UescColcicAPI.Service
     ```
 
-## Executando o Projeto
+ ## Executando o Projeto
 
 Para iniciar a API, execute o seguinte comando na raiz do projeto:
 
@@ -32,56 +33,56 @@ Para iniciar a API, execute o seguinte comando na raiz do projeto:
 dotnet run --project UescColcicAPI
 ```
 
-A API estará disponível em https://localhost:5001 ou http://localhost:5000.
+A API estará disponível em http://localhost:5207/swagger/index.html.  
 
-## Estrutura de Pastas
+ ## Estrutura de Pastas
 
-UescColcicAPI: Contém a API principal e os controladores.
-UescColcicAPI.Core: Contém as classes de domínio e modelos.
-UescColcicAPI.Service: Contém os serviços e a lógica de negócios.
+UescColcicAPI: Contém a API principal e os controladores.  
+UescColcicAPI.Core: Contém as classes de domínio e modelos.  
+UescColcicAPI.Service: Contém os serviços e a lógica de negócios.  
 
-## Endpoints
+ ## Endpoints
 
-### Projetos
+ ### Projetos
 
-GET /api/projects: Retorna todos os projetos.
-GET /api/projects/{id}: Retorna um projeto específico por ID.
-POST /api/projects: Cria um novo projeto.
-PUT /api/projects/{id}: Atualiza um projeto existente.
-DELETE /api/projects/{id}: Deleta um projeto.
+GET /api/projects: Retorna todos os projetos.  
+GET /api/projects/{id}: Retorna um projeto específico por ID.  
+POST /api/projects: Cria um novo projeto.  
+PUT /api/projects/{id}: Atualiza um projeto existente.  
+DELETE /api/projects/{id}: Deleta um projeto.  
 
-### Professores
+ ### Professores
 
-GET /api/professors: Retorna todos os professores.
-GET /api/professors/{id}: Retorna um professor específico por ID.
-POST /api/professors: Cria um novo professor.
-PUT /api/professors/{id}: Atualiza um professor existente.
-DELETE /api/professors/{id}: Deleta um professor.
+GET /api/professors: Retorna todos os professores.  
+GET /api/professors/{id}: Retorna um professor específico por ID.  
+POST /api/professors: Cria um novo professor.  
+PUT /api/professors/{id}: Atualiza um professor existente.  
+DELETE /api/professors/{id}: Deleta um professor.  
 
-### Habilidades
+ ### Habilidades
 
-GET /api/skills: Retorna todas as habilidades.
-GET /api/skills/{id}: Retorna uma habilidade específica por ID.
-POST /api/skills: Cria uma nova habilidade.
-PUT /api/skills/{id}: Atualiza uma habilidade existente.
-DELETE /api/skills/{id}: Deleta uma habilidade.
+GET /api/skills: Retorna todas as habilidades.  
+GET /api/skills/{id}: Retorna uma habilidade específica por ID.  
+POST /api/skills: Cria uma nova habilidade.  
+PUT /api/skills/{id}: Atualiza uma habilidade existente.  
+DELETE /api/skills/{id}: Deleta uma habilidade.  
 
-### Estudantes
+ ### Estudantes
 
-GET /api/students: Retorna todos os estudantes.
-GET /api/students/{id}: Retorna um estudante específico por ID.
-POST /api/students: Cria um novo estudante.
-PUT /api/students/{id}: Atualiza um estudante existente.
-DELETE /api/students/{id}: Deleta um estudante.
+GET /api/students: Retorna todos os estudantes.  
+GET /api/students/{id}: Retorna um estudante específico por ID.  
+POST /api/students: Cria um novo estudante.  
+PUT /api/students/{id}: Atualiza um estudante existente.  
+DELETE /api/students/{id}: Deleta um estudante.  
 
-## Autores
+ ## Autores
 
-Beatriz Oliveira
-Eduardo Watanabe
-Júlia Ramos
-Murilo Maia
+Beatriz Oliveira  
+Eduardo Watanabe  
+Júlia Ramos  
+Murilo Maia  
 
-## Licença
+ ## Licença
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
 
