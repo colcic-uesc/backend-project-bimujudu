@@ -3029,19 +3029,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Murilo\\.nuget\\packages\\": {}
+    "C:\\Users\\Lenovo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI\\UescColcicAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Lenovo\\Downloads\\web\\backend-project-bimujudu\\backend\\UescColcicAPI\\UescColcicAPI.csproj",
       "projectName": "UescColcicAPI",
-      "projectPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI\\UescColcicAPI.csproj",
-      "packagesPath": "C:\\Users\\Murilo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI\\obj\\",
+      "projectPath": "C:\\Users\\Lenovo\\Downloads\\web\\backend-project-bimujudu\\backend\\UescColcicAPI\\UescColcicAPI.csproj",
+      "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Lenovo\\Downloads\\web\\backend-project-bimujudu\\backend\\UescColcicAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Murilo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -3053,11 +3053,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj": {
-              "projectPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj"
+            "C:\\Users\\Lenovo\\Downloads\\web\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Downloads\\web\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj"
             },
-            "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj": {
-              "projectPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj"
+            "C:\\Users\\Lenovo\\Downloads\\web\\backend-project-bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj": {
+              "projectPath": "C:\\Users\\Lenovo\\Downloads\\web\\backend-project-bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj"
             }
           }
         }
@@ -3121,7 +3121,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.402/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

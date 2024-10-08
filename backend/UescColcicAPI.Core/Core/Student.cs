@@ -11,6 +11,9 @@ public class Student
    public string Email { get; set; }
    public string Course { get; set; }
    public string Bio { get; set; }
+
    [JsonIgnore]
    public virtual ICollection<StudentSkill> StudentSkills { get; set; } = new List<StudentSkill>();
+
+   public virtual Professor Professor { get; set; } 
 }
