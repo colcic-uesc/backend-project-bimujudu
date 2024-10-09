@@ -16,9 +16,10 @@ namespace UescColcicAPI.Services.BD
         }
 
         public void Create(Project entity)
-        {
+        {   
             _context.Projects.Add(entity);
             _context.SaveChanges();
+        
         }
 
         public void Delete(Project entity)
@@ -51,7 +52,6 @@ namespace UescColcicAPI.Services.BD
                 project.Type = entity.Type;
                 project.StartDate = entity.StartDate;
                 project.EndDate = entity.EndDate;
-                project.ProfessorId = entity.ProfessorId; // Atualiza a chave estrangeira
                 _context.SaveChanges();
             }
         }

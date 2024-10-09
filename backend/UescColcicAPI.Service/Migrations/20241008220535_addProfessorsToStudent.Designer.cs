@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UescColcicAPI.Services.BD;
 
@@ -10,9 +11,11 @@ using UescColcicAPI.Services.BD;
 namespace UescColcicAPI.Services.Migrations
 {
     [DbContext(typeof(UescColcicDBContext))]
-    partial class UescColcicDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241008220535_addProfessorsToStudent")]
+    partial class addProfessorsToStudent
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
@@ -30,7 +33,7 @@ namespace UescColcicAPI.Services.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("ProfessorId")
+                    b.Property<int>("ProfessorId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("StartDate")
@@ -155,7 +158,7 @@ namespace UescColcicAPI.Services.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("ProfessorId")
+                    b.Property<int>("ProfessoId")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Registration")
@@ -164,7 +167,7 @@ namespace UescColcicAPI.Services.Migrations
 
                     b.HasKey("StudentId");
 
-                    b.HasIndex("ProfessorId");
+                    b.HasIndex("ProfessoId");
 
                     b.ToTable("Students");
                 });
@@ -173,7 +176,9 @@ namespace UescColcicAPI.Services.Migrations
                 {
                     b.HasOne("UescColcicAPI.Core.Professor", "Professor")
                         .WithMany("Projects")
-                        .HasForeignKey("ProfessorId");
+                        .HasForeignKey("ProfessorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Professor");
                 });
@@ -220,8 +225,9 @@ namespace UescColcicAPI.Services.Migrations
                 {
                     b.HasOne("UescColcicAPI.Core.Professor", "Professor")
                         .WithMany("Students")
-                        .HasForeignKey("ProfessorId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .HasForeignKey("ProfessoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Professor");
                 });

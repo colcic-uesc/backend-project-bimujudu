@@ -262,3 +262,9 @@ C:\Users\Lenovo\Downloads\web\backend-project-bimujudu\backend\UescColcicAPI\obj
 C:\Users\Lenovo\Downloads\web\backend-project-bimujudu\backend\UescColcicAPI\obj\Debug\net8.0\UescColcicAPI.pdb
 C:\Users\Lenovo\Downloads\web\backend-project-bimujudu\backend\UescColcicAPI\obj\Debug\net8.0\UescColcicAPI.genruntimeconfig.cache
 C:\Users\Lenovo\Downloads\web\backend-project-bimujudu\backend\UescColcicAPI\obj\Debug\net8.0\ref\UescColcicAPI.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.Extensions.Options.dll

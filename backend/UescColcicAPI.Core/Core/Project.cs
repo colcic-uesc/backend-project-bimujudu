@@ -11,8 +11,10 @@ public class Project
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
 
-    public int ProfessorId { get; set; } 
-    public required virtual Professor Professor { get; set; } 
+    [JsonIgnore]
+    public int? ProfessorId { get; set; } 
+    [JsonIgnore]
+    public virtual Professor? Professor { get; set; } 
 
     [JsonIgnore]
     public virtual ICollection<ProjectSkill> ProjectSkills { get; set; } = new List<ProjectSkill>();

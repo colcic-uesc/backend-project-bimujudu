@@ -73,7 +73,7 @@ namespace UescColcicAPI.Controllers
 
         // Adiciona uma skill ao projeto
         [HttpPost("{projectId}/skill", Name = "AddSkillToProject")]
-        public IActionResult AddSkillToProject(int projectId, [FromBody] int skillId, int weight)
+        public IActionResult AddSkillToProject(int projectId,  int skillId, int weight)
         {
             _projectCRUD.AddSkillToProject(projectId, skillId, weight);
             return CreatedAtAction(nameof(ReadAllSkillsInProject), new { projectId }, null);
@@ -101,7 +101,7 @@ namespace UescColcicAPI.Controllers
 
         // Atualiza uma skill do projeto
         [HttpPut("{projectId}/skill/{skillId}", Name = "UpdateSkillInProject")]
-        public IActionResult UpdateSkillInProject(int projectId, int skillId, [FromBody] int weight)
+        public IActionResult UpdateSkillInProject(int projectId, int skillId, int weight)
         {
             _projectCRUD.UpdateSkillInProject(projectId, skillId, weight);
             return NoContent(); // 204 No Content

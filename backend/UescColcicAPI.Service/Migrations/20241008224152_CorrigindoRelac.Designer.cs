@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using UescColcicAPI.Services.BD;
 
@@ -10,9 +11,11 @@ using UescColcicAPI.Services.BD;
 namespace UescColcicAPI.Services.Migrations
 {
     [DbContext(typeof(UescColcicDBContext))]
-    partial class UescColcicDBContextModelSnapshot : ModelSnapshot
+    [Migration("20241008224152_CorrigindoRelac")]
+    partial class CorrigindoRelac
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.8");
@@ -30,7 +33,7 @@ namespace UescColcicAPI.Services.Migrations
                     b.Property<DateTime>("EndDate")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("ProfessorId")
+                    b.Property<int>("ProfessorId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("StartDate")
@@ -173,7 +176,9 @@ namespace UescColcicAPI.Services.Migrations
                 {
                     b.HasOne("UescColcicAPI.Core.Professor", "Professor")
                         .WithMany("Projects")
-                        .HasForeignKey("ProfessorId");
+                        .HasForeignKey("ProfessorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Professor");
                 });

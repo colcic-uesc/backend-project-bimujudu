@@ -15,5 +15,8 @@ public class Student
    [JsonIgnore]
    public virtual ICollection<StudentSkill> StudentSkills { get; set; } = new List<StudentSkill>();
 
-   public virtual Professor Professor { get; set; } 
+   [JsonIgnore]
+   public virtual Professor? Professor { get; set; } 
+   [JsonIgnore]
+   public int? ProfessorId { get; set; }
 }

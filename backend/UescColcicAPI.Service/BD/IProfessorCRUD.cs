@@ -7,6 +7,7 @@ namespace UescColcicAPI.Services.BD.Interfaces
     {
         public void AddStudentToProfessor(int professorId, int studentId);
         public void RemoveStudentFromProfessor(int professorId, int studentId);
+        
         // Lê todos os estudantes que são mentorados por um professor
         public IEnumerable<Student> ReadAllStudentsOfProfessor(int professorId);
 

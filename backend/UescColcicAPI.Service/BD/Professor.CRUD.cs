@@ -17,6 +17,7 @@ public class ProfessorCRUD : IProfessorCRUD
 
     public void Create(Professor entity)
     {
+        
         _context.Professors.Add(entity);
         _context.SaveChanges();
     }
@@ -84,6 +85,7 @@ public class ProfessorCRUD : IProfessorCRUD
             }
         }
     }
+
 
     public IEnumerable<Student> ReadAllStudentsOfProfessor(int professorId)
     {

@@ -54,7 +54,8 @@ public class UescColcicDBContext : DbContext
         modelBuilder.Entity<Student>()
             .HasOne(x => x.Professor)
             .WithMany(X => X.Students)
-            .HasForeignKey(x => x.StudentId);
+            .HasForeignKey(x => x.ProfessorId)
+            .OnDelete(DeleteBehavior.SetNull); 
 
         // Relacionamento professor -> project
         modelBuilder.Entity<Project>()
