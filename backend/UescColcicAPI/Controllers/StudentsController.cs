@@ -55,33 +55,47 @@ namespace UescColcicAPI.Controllers;
         }
 
         [HttpPut(Name = "UpdateStudent")]
-        public void Update(Student student)
+        public IActionResult Update([FromBody] Student student)
         {
-            _studentsCRUD.Update(student);
+            if (student == null)
+            {
+                return BadRequest();
+            }
 
+            _studentsCRUD.Update(student);
+            return Ok();
         }
 
         [HttpDelete(Name = "DeleteStudent")]
-        public void Delete(Student entity)
-        {
+        public IActionResult Delete([FromBody] Student entity)
+        {   
+            if (entity == null)
+            {
+                return BadRequest();
+            }
+
             _studentsCRUD.Delete(entity);
+            return Ok();
         }
 
         [HttpPost("{studentId}/skill", Name = "CreateStudentSkill")]
         public IActionResult AddSkillToStudent(int skillId, int weight ,int studentId)
         {
-            _studentsCRUD.AddSkillToStudent(studentId, skillId, weight);
-            return Created();
+            bool success = _studentsCRUD.AddSkillToStudent(studentId, skillId, weight);
+            if (!success)
+            {
+                return BadRequest($"Student with ID {studentId} not found.");
+            }
+            
+            return Ok();
         }
 
         [HttpGet("{studentId}/skill", Name = "GetStudentSkill")]
         public IActionResult ReadAllSkillsToStudent(int studentId)
         {
             var skills = _studentsCRUD.ReadAllSkillsToStudent(studentId);
-
             if (skills == null)
             {
-                
                 return BadRequest($"Student with ID {studentId} not found.");
             }
 
@@ -89,12 +103,26 @@ namespace UescColcicAPI.Controllers;
         }
 
         [HttpDelete("{studentId}/skill", Name = "DeleteStudentSkill")]
-        public void RemoveSkillToStudent(int studentId, int skillId){
-            _studentsCRUD.RemoveSkillToStudent(studentId, skillId);
+        public IActionResult RemoveSkillToStudent(int studentId, int skillId)
+        {
+            bool success = _studentsCRUD.RemoveSkillToStudent(studentId, skillId);
+            if (!success)
+            {
+                return BadRequest($"Student with ID {studentId} or Skill with Id {skillId} not found.");
+            }
+
+            return Ok();
         }
 
         [HttpPut("{studentId}/skill", Name = "UpdateStudentSkill")]
-        public void UpdateSkillToStudent(int studentId, int skillId, int weight){
-            _studentsCRUD.UpdateSkillToStudent(studentId, skillId, weight);
+        public IActionResult UpdateSkillToStudent(int studentId, int skillId, int weight)
+        {
+            bool success = _studentsCRUD.UpdateSkillToStudent(studentId, skillId, weight);
+            if(!success)
+            {
+                return BadRequest($"Student with ID {studentId} or Skill with Id {skillId} not found.");
+            }
+
+            return Ok();
         }
     }

@@ -5,8 +5,8 @@ namespace UescColcicAPI.Services.BD.Interfaces;
 
 public interface IStudentsCRUD : IBaseCRUD<Student>
 {
-      public void AddSkillToStudent(int StudentId, int SkillId, int weight);
-      public void RemoveSkillToStudent(int studentId, int skillId);
-      public void UpdateSkillToStudent(int studentId, int skillId, int weight);
+      public bool AddSkillToStudent(int StudentId, int SkillId, int weight);
+      public bool RemoveSkillToStudent(int studentId, int skillId);
+      public bool UpdateSkillToStudent(int studentId, int skillId, int weight);
       public IEnumerable<Skill> ReadAllSkillsToStudent(int studentId);
 }

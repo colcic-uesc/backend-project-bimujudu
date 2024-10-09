@@ -8,9 +8,11 @@ namespace UescColcicAPI.Services.BD;
 public class StudentsCRUD : IStudentsCRUD
 {
     private UescColcicDBContext _context;
-   public StudentsCRUD(UescColcicDBContext context){
+   public StudentsCRUD(UescColcicDBContext context)
+   {
         _context = context;
    }
+   
     public void Create(Student entity)
     {
         _context.Students.Add(entity);
@@ -52,7 +54,7 @@ public class StudentsCRUD : IStudentsCRUD
         }
     }
 
-    public void AddSkillToStudent(int studentId, int skillId, int weight){
+    public bool AddSkillToStudent(int studentId, int skillId, int weight){
         var student = this.Find(studentId);
         var skill = _context.Skills.FirstOrDefault(x => x.SkillId == skillId);
 
@@ -66,23 +68,33 @@ public class StudentsCRUD : IStudentsCRUD
             };
             _context.StudentSkills.Add(StudentSkill);
             _context.SaveChanges();
+
+            return true;
         }
+
+        return false;
     }
 
-    public void RemoveSkillToStudent(int studentId, int skillId){
+    public bool RemoveSkillToStudent(int studentId, int skillId){
         var studentSkill = _context.StudentSkills.FirstOrDefault(x => x.SkillId == skillId && x.StudentId == studentId);
         if(studentSkill is not null){
             _context.StudentSkills.Remove(studentSkill);
             _context.SaveChanges();
+            return true;
         }
+
+        return false;
     }
 
-    public void UpdateSkillToStudent(int studentId, int skillId, int weight){
+    public bool UpdateSkillToStudent(int studentId, int skillId, int weight){
         var studentSkill = _context.StudentSkills.FirstOrDefault(x => x.SkillId == skillId && x.StudentId == studentId);
         if(studentSkill is not null){
             studentSkill.Weight = weight;
             _context.SaveChanges();
+            return true;
         }
+
+        return false;
     }
 
     public IEnumerable<Skill> ReadAllSkillsToStudent(int studentId){
