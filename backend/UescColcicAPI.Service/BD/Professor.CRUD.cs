@@ -60,7 +60,7 @@ public class ProfessorCRUD : IProfessorCRUD
 
     // Implementação dos métodos específicos da interface IProfessorCRUD
 
-    public void AddStudentToProfessor(int professorId, int studentId)
+    public bool AddStudentToProfessor(int professorId, int studentId)
     {
         var professor = this.Find(professorId);
         var student = _context.Students.FirstOrDefault(s => s.StudentId == studentId);
@@ -69,10 +69,13 @@ public class ProfessorCRUD : IProfessorCRUD
         {
             professor.Students.Add(student);
             _context.SaveChanges();
+            return true;
         }
+
+        return false;
     }
 
-    public void RemoveStudentFromProfessor(int professorId, int studentId)
+    public bool RemoveStudentFromProfessor(int professorId, int studentId)
     {
         var professor = this.Find(professorId);
         if (professor is not null)
@@ -82,8 +85,11 @@ public class ProfessorCRUD : IProfessorCRUD
             {
                 professor.Students.Remove(student);
                 _context.SaveChanges();
+                return true;
             }
         }
+
+        return false;
     }
 
 
@@ -93,7 +99,7 @@ public class ProfessorCRUD : IProfessorCRUD
         return professor?.Students ?? Enumerable.Empty<Student>();
     }
 
-    public void AddProjectToProfessor(int professorId, int projectId)
+    public bool AddProjectToProfessor(int professorId, int projectId)
     {
         var professor = this.Find(professorId);
         var project = _context.Projects.FirstOrDefault(p => p.ProjectId == projectId);
@@ -102,10 +108,13 @@ public class ProfessorCRUD : IProfessorCRUD
         {
             professor.Projects.Add(project);
             _context.SaveChanges();
+            return true;
         }
+
+        return false;
     }
 
-    public void RemoveProjectFromProfessor(int professorId, int projectId)
+    public bool RemoveProjectFromProfessor(int professorId, int projectId)
     {
         var professor = this.Find(professorId);
         if (professor is not null)
@@ -115,8 +124,11 @@ public class ProfessorCRUD : IProfessorCRUD
             {
                 professor.Projects.Remove(project);
                 _context.SaveChanges();
+                return true;
             }
         }
+
+        return false;
     }
 
     public IEnumerable<Project> ReadAllProjectsOfProfessor(int professorId)

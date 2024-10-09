@@ -18,7 +18,7 @@ namespace UescColcicAPI.Controllers
             _professorCRUD = professorCRUD;
         }
 
-        [HttpPost(Name = "CreateProfessor")]
+        [HttpPost(Name = "CreateProfessor")]    
         public IActionResult Post([FromBody] Professor professor)
         {
             if (professor == null)
@@ -56,7 +56,7 @@ namespace UescColcicAPI.Controllers
             }
 
             _professorCRUD.Update(professor);
-            return NoContent(); // 204 No Content
+            return Ok();
         }
 
         [HttpDelete("{id}", Name = "DeleteProfessor")]
@@ -69,23 +69,33 @@ namespace UescColcicAPI.Controllers
             }
 
             _professorCRUD.Delete(professor);
-            return NoContent(); // 204 No Content
+            return Ok();
         }
 
         // Adiciona um student ao professor
         [HttpPost("{professorId}/student/{studentId}", Name = "AddStudentToProfessor")]
         public IActionResult AddStudentToProfessor(int professorId, int studentId)
         {
-            _professorCRUD.AddStudentToProfessor(professorId, studentId);
-            return NoContent(); // 204 No Content
+            bool success = _professorCRUD.AddStudentToProfessor(professorId, studentId);
+            if (!success)
+            {
+                return NotFound($"Professor with ID {professorId} or Student with ID {studentId} not found.");
+            }
+
+            return Ok();
         }
 
         // Remove um student do professor
         [HttpDelete("{professorId}/student/{studentId}", Name = "RemoveStudentFromProfessor")]
         public IActionResult RemoveStudentFromProfessor(int professorId, int studentId)
         {
-            _professorCRUD.RemoveStudentFromProfessor(professorId, studentId);
-            return NoContent(); // 204 No Content
+            bool success = _professorCRUD.RemoveStudentFromProfessor(professorId, studentId);
+            if (!success)
+            {
+                return NotFound($"Professor with ID {professorId} or Student with ID {studentId} not found.");
+            }
+
+            return Ok();
         }
 
         // Lê todos os students associados a um professor
@@ -104,16 +114,26 @@ namespace UescColcicAPI.Controllers
         [HttpPost("{professorId}/project/{projectId}", Name = "AddProjectToProfessor")]
         public IActionResult AddProjectToProfessor(int professorId, int projectId)
         {
-            _professorCRUD.AddProjectToProfessor(professorId, projectId);
-            return NoContent(); // 204 No Content
+            bool success = _professorCRUD.AddProjectToProfessor(professorId, projectId);
+            if(!success)
+            {
+                return NotFound($"Professor with ID {professorId} or Project with ID {projectId} not found.");
+            }
+                
+            return Ok();
         }
 
         // Remove um project do professor
         [HttpDelete("{professorId}/project/{projectId}", Name = "RemoveProjectFromProfessor")]
         public IActionResult RemoveProjectFromProfessor(int professorId, int projectId)
         {
-            _professorCRUD.RemoveProjectFromProfessor(professorId, projectId);
-            return NoContent(); // 204 No Content
+            bool success = _professorCRUD.RemoveProjectFromProfessor(professorId, projectId);
+            if (!success)
+            {
+                return NotFound($"Professor with ID {professorId} or Project with ID {projectId} not found.");
+            }
+
+            return Ok();
         }
 
         // Lê todos os projects associados a um professor
