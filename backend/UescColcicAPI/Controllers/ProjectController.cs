@@ -55,7 +55,7 @@ namespace UescColcicAPI.Controllers
             }
 
             _projectCRUD.Update(project);
-            return NoContent(); // 204 No Content
+            return Ok();
         }
 
         [HttpDelete("{id}", Name = "DeleteProject")]
@@ -68,7 +68,7 @@ namespace UescColcicAPI.Controllers
             }
 
             _projectCRUD.Delete(project);
-            return NoContent(); // 204 No Content
+            return Ok();
         }
 
         // Adiciona uma skill ao projeto
@@ -95,16 +95,25 @@ namespace UescColcicAPI.Controllers
         [HttpDelete("{projectId}/skill/{skillId}", Name = "RemoveSkillFromProject")]
         public IActionResult RemoveSkillFromProject(int projectId, int skillId)
         {
-            _projectCRUD.RemoveSkillFromProject(projectId, skillId);
-            return NoContent(); // 204 No Content
+            bool success = _projectCRUD.RemoveSkillFromProject(projectId, skillId);
+            if (!success)
+            {
+                return BadRequest($"Project with ID {projectId} or Skill with ID {skillId} not found.");
+            }
+            return Ok();
         }
 
         // Atualiza uma skill do projeto
         [HttpPut("{projectId}/skill/{skillId}", Name = "UpdateSkillInProject")]
         public IActionResult UpdateSkillInProject(int projectId, int skillId, int weight)
         {
-            _projectCRUD.UpdateSkillInProject(projectId, skillId, weight);
-            return NoContent(); // 204 No Content
+            bool success = _projectCRUD.UpdateSkillInProject(projectId, skillId, weight);
+            if (!success)
+            {
+                return BadRequest($"Project with ID {projectId} or Skill with ID {skillId} not found.");
+            }          
+           
+            return Ok();
         }
     }
 }

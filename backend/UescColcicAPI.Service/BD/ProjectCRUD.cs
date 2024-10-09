@@ -56,7 +56,7 @@ namespace UescColcicAPI.Services.BD
             }
         }
 
-        public void AddSkillToProject(int projectId, int skillId, int weight)
+        public bool AddSkillToProject(int projectId, int skillId, int weight)
         {
             var project = this.Find(projectId);
             var skill = _context.Skills.FirstOrDefault(x => x.SkillId == skillId);
@@ -73,10 +73,13 @@ namespace UescColcicAPI.Services.BD
                 };
                 _context.ProjectSkills.Add(projectSkill);
                 _context.SaveChanges();
+                return true;
             }
+
+            return false;
         }
 
-        public void RemoveSkillFromProject(int projectId, int skillId)
+        public bool RemoveSkillFromProject(int projectId, int skillId)
         {
             var projectSkill = _context.ProjectSkills
                 .FirstOrDefault(x => x.ProjectId == projectId && x.SkillId == skillId);
@@ -85,10 +88,13 @@ namespace UescColcicAPI.Services.BD
             {
                 _context.ProjectSkills.Remove(projectSkill);
                 _context.SaveChanges();
+                return true;
             }
+
+            return false;
         }
 
-        public void UpdateSkillInProject(int projectId, int skillId, int weight)
+        public bool UpdateSkillInProject(int projectId, int skillId, int weight)
         {
             var projectSkill = _context.ProjectSkills
                 .FirstOrDefault(x => x.ProjectId == projectId && x.SkillId == skillId);
@@ -97,7 +103,10 @@ namespace UescColcicAPI.Services.BD
             {
                 projectSkill.Weight = weight;
                 _context.SaveChanges();
+                return true;
             }
+
+            return false;
         }
 
         public IEnumerable<Skill> ReadAllSkillsInProject(int projectId)
