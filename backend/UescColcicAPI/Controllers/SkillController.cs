@@ -55,16 +55,27 @@ namespace UescColcicAPI.Controllers;
         }
 
         [HttpPut(Name = "UpdateSkill")]
-        public void Update(Skill skill)
+        public ActionResult<Skill> Update(Skill skill)
         {
-            _skillsCRUD.Update(skill);
+            if (skill == null)
+            {
+                return BadRequest("Skill is null.");
+            }
 
+            _skillsCRUD.Update(skill);
+            return Ok(skill);
         }
 
         [HttpDelete(Name = "DeleteSkill")]
-        public void Delete(Skill entity)
+        public IActionResult Delete(Skill entity)
         {
+            if (entity == null)
+            {
+                return BadRequest("Skill is null.");
+            }
+
             _skillsCRUD.Delete(entity);
+            return Ok();
         }
 
     }
