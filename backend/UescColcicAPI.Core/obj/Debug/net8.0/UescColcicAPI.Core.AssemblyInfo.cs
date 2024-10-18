@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UescColcicAPI.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fc8c559d88ff2c88c1c0e660cc4dacb8635968a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6719f98dbfe6f69d9b212b1dfe63dbbe1a6586db")]
 [assembly: System.Reflection.AssemblyProductAttribute("UescColcicAPI.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UescColcicAPI.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
