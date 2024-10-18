@@ -1,4 +1,3 @@
-using UescColcicAPI.Core;
 using UescColcicAPI.Services.BD;
 using UescColcicAPI.Services.BD.Interfaces;
 
@@ -28,6 +27,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+
+app.UseMiddleware<EventLoggingMiddleware>();
+app.UseMiddleware<ResponseAppendMiddleware>();
 
 app.MapControllers();
 
