@@ -48,7 +48,7 @@ namespace UescColcicAPI.Services.Migrations
 
                     b.HasIndex("ProfessorId");
 
-                    b.ToTable("Projects");
+                    b.ToTable("Projects", (string)null);
                 });
 
             modelBuilder.Entity("ProjectSkill", b =>
@@ -66,7 +66,7 @@ namespace UescColcicAPI.Services.Migrations
 
                     b.HasIndex("SkillId");
 
-                    b.ToTable("ProjectSkills");
+                    b.ToTable("ProjectSkills", (string)null);
                 });
 
             modelBuilder.Entity("StudentSkill", b =>
@@ -84,7 +84,7 @@ namespace UescColcicAPI.Services.Migrations
 
                     b.HasIndex("SkillId");
 
-                    b.ToTable("StudentSkills");
+                    b.ToTable("StudentSkills", (string)null);
                 });
 
             modelBuilder.Entity("UescColcicAPI.Core.Professor", b =>
@@ -111,7 +111,7 @@ namespace UescColcicAPI.Services.Migrations
 
                     b.HasKey("ProfessorId");
 
-                    b.ToTable("Professors");
+                    b.ToTable("Professors", (string)null);
                 });
 
             modelBuilder.Entity("UescColcicAPI.Core.Skill", b =>
@@ -130,7 +130,7 @@ namespace UescColcicAPI.Services.Migrations
 
                     b.HasKey("SkillId");
 
-                    b.ToTable("Skills");
+                    b.ToTable("Skills", (string)null);
                 });
 
             modelBuilder.Entity("UescColcicAPI.Core.Student", b =>
@@ -166,7 +166,7 @@ namespace UescColcicAPI.Services.Migrations
 
                     b.HasIndex("ProfessorId");
 
-                    b.ToTable("Students");
+                    b.ToTable("Students", (string)null);
                 });
 
             modelBuilder.Entity("Project", b =>
