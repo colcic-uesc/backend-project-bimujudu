@@ -1,0 +1,2 @@
+ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /api/Professors, RequestTime: 22/10/2024 22:39:24, TotalProcessingTime: 1053ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /api/Professors, RequestTime: 22/10/2024 22:40:52, TotalProcessingTime: 970ms

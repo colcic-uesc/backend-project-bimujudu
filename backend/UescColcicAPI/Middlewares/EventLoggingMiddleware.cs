@@ -1,16 +1,16 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Http;
 using System.Threading.Tasks;
+using System.IO;
 
 public class EventLoggingMiddleware
 {
     private readonly RequestDelegate _next;
-    private readonly UescColcicAPI.Services.BD.UescColcicDBContext _dbContext;
+    private readonly string _logFilePath = "request_logs.txt";
 
-    public EventLoggingMiddleware(RequestDelegate next, UescColcicAPI.Services.BD.UescColcicDBContext dbContext)
+    public EventLoggingMiddleware(RequestDelegate next)
     {
         _next = next;
-        _dbContext = dbContext;
     }
 
     public async Task InvokeAsync(HttpContext context)
@@ -23,24 +23,16 @@ public class EventLoggingMiddleware
         var requestMethod = context.Request.Method;
         var requestUrl = context.Request.Path;
         var requestTime = DateTime.UtcNow;
-        
+
         await _next(context);
 
         stopwatch.Stop();
         var totalProcessingTime = stopwatch.ElapsedMilliseconds;
 
-        // Cria um log e salva no banco de dados
-        var log = new RequestLog
-        {
-            ClientIp = clientIp,
-            HasJwtToken = hasJwtToken,
-            RequestMethod = requestMethod,
-            RequestUrl = requestUrl,
-            RequestTime = requestTime,
-            TotalProcessingTime = totalProcessingTime
-        };
-
-        _dbContext.RequestLogs.Add(log);
-        await _dbContext.SaveChangesAsync();
+        // Cria um log e salva em um arquivo
+        var log = $"ClientIp: {clientIp}, HasJwtToken: {hasJwtToken}, RequestMethod: {requestMethod}, RequestUrl: {requestUrl}, RequestTime: {requestTime}, TotalProcessingTime: {totalProcessingTime}ms";
+        await File.AppendAllTextAsync(_logFilePath, log + "\n");
     }
 }
+        
+

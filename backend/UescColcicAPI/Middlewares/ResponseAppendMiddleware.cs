@@ -12,9 +12,13 @@ public class ResponseAppendMiddleware
 
     public async Task InvokeAsync(HttpContext context)
     {
-        await _next(context);  
+        context.Response.OnStarting(() =>
+        {
+            context.Response.Headers.Append("X-APP-NAME", "MeuApp");
+            context.Response.Headers.Append("X-APP-API-VERSION", "0.1");
+            return Task.CompletedTask;
+        });
 
-        context.Response.Headers.Add("X-APP-NAME", "MyApp");
-        context.Response.Headers.Add("X-APP-API-VERSION", "0.1");
+        await _next(context);
     }
 }
