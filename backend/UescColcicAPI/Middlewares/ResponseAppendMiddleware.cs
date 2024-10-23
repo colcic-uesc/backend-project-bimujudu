@@ -14,7 +14,7 @@ public class ResponseAppendMiddleware
     {
         context.Response.OnStarting(() =>
         {
-            context.Response.Headers.Append("X-APP-NAME", "MeuApp");
+            context.Response.Headers.Append("X-APP-NAME", "BIMUJUDU");
             context.Response.Headers.Append("X-APP-API-VERSION", "0.1");
             return Task.CompletedTask;
         });

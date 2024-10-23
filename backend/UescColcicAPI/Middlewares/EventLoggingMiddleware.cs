@@ -22,7 +22,7 @@ public class EventLoggingMiddleware
         var hasJwtToken = context.Request.Headers.ContainsKey("Authorization");
         var requestMethod = context.Request.Method;
         var requestUrl = context.Request.Path;
-        var requestTime = DateTime.UtcNow;
+        var requestTime = DateTime.Now;
 
         await _next(context);
 

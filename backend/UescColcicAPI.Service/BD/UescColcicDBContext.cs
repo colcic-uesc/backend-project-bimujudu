@@ -13,9 +13,6 @@ public class UescColcicDBContext : DbContext
    public DbSet<Professor> Professors { get; set; }
    public DbSet<Project> Projects { get; set; }
    public DbSet<ProjectSkill> ProjectSkills { get; set; }
-
-   public DbSet<RequestLog> RequestLogs { get; set; }
-
    protected override void OnModelCreating(ModelBuilder modelBuilder)
    {
         modelBuilder.Entity<Skill>().HasKey(x => x.SkillId);
@@ -27,8 +24,6 @@ public class UescColcicDBContext : DbContext
         modelBuilder.Entity<Project>().HasKey(x => x.ProjectId);
         // Chave primaria composta 
         modelBuilder.Entity<ProjectSkill>().HasKey(x => new { x.ProjectId, x.SkillId});
-
-        modelBuilder.Entity<RequestLog>().HasKey(x => x.Id);
 
         // Relacionamento student -> studentSkill
         modelBuilder.Entity<StudentSkill>()

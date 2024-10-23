@@ -1,2 +1,5 @@
 ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /api/Professors, RequestTime: 22/10/2024 22:39:24, TotalProcessingTime: 1053ms
 ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /api/Professors, RequestTime: 22/10/2024 22:40:52, TotalProcessingTime: 970ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /api/Professors, RequestTime: 22/10/2024 22:53:09, TotalProcessingTime: 1529ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /api/Professors, RequestTime: 22/10/2024 22:58:52, TotalProcessingTime: 1002ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /api/Professors, RequestTime: 22/10/2024 19:59:53, TotalProcessingTime: 955ms

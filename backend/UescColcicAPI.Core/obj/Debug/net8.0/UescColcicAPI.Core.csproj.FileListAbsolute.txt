@@ -22,3 +22,15 @@ C:\Users\Lenovo\Downloads\web\backend-project-bimujudu\backend\UescColcicAPI.Cor
 C:\Users\Lenovo\Downloads\web\backend-project-bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\refint\UescColcicAPI.Core.dll
 C:\Users\Lenovo\Downloads\web\backend-project-bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.pdb
 C:\Users\Lenovo\Downloads\web\backend-project-bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\ref\UescColcicAPI.Core.dll
+E:\WEB\backend-project-bimujudu\backend\UescColcicAPI.Core\bin\Debug\net8.0\UescColcicAPI.Core.deps.json
+E:\WEB\backend-project-bimujudu\backend\UescColcicAPI.Core\bin\Debug\net8.0\UescColcicAPI.Core.dll
+E:\WEB\backend-project-bimujudu\backend\UescColcicAPI.Core\bin\Debug\net8.0\UescColcicAPI.Core.pdb
+E:\WEB\backend-project-bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\WEB\backend-project-bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.AssemblyInfoInputs.cache
+E:\WEB\backend-project-bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.AssemblyInfo.cs
+E:\WEB\backend-project-bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.csproj.CoreCompileInputs.cache
+E:\WEB\backend-project-bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.sourcelink.json
+E:\WEB\backend-project-bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.dll
+E:\WEB\backend-project-bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\refint\UescColcicAPI.Core.dll
+E:\WEB\backend-project-bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\UescColcicAPI.Core.pdb
+E:\WEB\backend-project-bimujudu\backend\UescColcicAPI.Core\obj\Debug\net8.0\ref\UescColcicAPI.Core.dll

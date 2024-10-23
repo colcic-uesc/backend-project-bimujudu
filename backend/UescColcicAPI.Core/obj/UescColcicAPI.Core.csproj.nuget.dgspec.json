@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Downloads\\web\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj": {}
+    "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Downloads\\web\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj": {
+    "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Downloads\\web\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj",
+        "projectUniqueName": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj",
         "projectName": "UescColcicAPI.Core",
-        "projectPath": "C:\\Users\\Lenovo\\Downloads\\web\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj",
-        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Downloads\\web\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\obj\\",
+        "projectPath": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj",
+        "packagesPath": "C:\\Users\\Tksh\\.nuget\\packages\\",
+        "outputPath": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Tksh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
