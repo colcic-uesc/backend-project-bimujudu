@@ -19,4 +19,9 @@ public class Student
    public virtual Professor? Professor { get; set; } 
    [JsonIgnore]
    public int? ProfessorId { get; set; }
+
+   [JsonIgnore]
+   public virtual User? User { get; set; } 
+   [JsonIgnore]
+   public int? UserId { get; set; }
 }

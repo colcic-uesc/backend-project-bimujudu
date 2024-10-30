@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Tksh\\.nuget\\packages\\": {}
+    "C:\\Users\\Murilo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj",
       "projectName": "UescColcicAPI.Core",
-      "projectPath": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj",
-      "packagesPath": "C:\\Users\\Tksh\\.nuget\\packages\\",
-      "outputPath": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\obj\\",
+      "projectPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj",
+      "packagesPath": "C:\\Users\\Murilo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Tksh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Murilo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"

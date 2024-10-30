@@ -16,5 +16,10 @@ namespace UescColcicAPI.Core
 
         [JsonIgnore]
         public virtual ICollection<Project> Projects { get; set; } = new List<Project>(); // Relacionamento com Projects
+
+        [JsonIgnore]
+        public virtual User? User { get; set; } 
+        [JsonIgnore]
+        public int? UserId { get; set; }
     }
 }
