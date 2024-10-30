@@ -2591,19 +2591,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Tksh\\.nuget\\packages\\": {}
+    "C:\\Users\\Murilo\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj",
+      "projectUniqueName": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj",
       "projectName": "UescColcicAPI.Services",
-      "projectPath": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj",
-      "packagesPath": "C:\\Users\\Tksh\\.nuget\\packages\\",
-      "outputPath": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Service\\obj\\",
+      "projectPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj",
+      "packagesPath": "C:\\Users\\Murilo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Service\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Tksh\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Murilo\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2615,8 +2615,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj": {
-              "projectPath": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj"
+            "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj": {
+              "projectPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj"
             }
           }
         }
