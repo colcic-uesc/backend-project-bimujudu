@@ -406,3 +406,12 @@ E:\WEB\backend-project-bimujudu\backend\UescColcicAPI\obj\Debug\net8.0\scopedcss
 E:\WEB\backend-project-bimujudu\backend\UescColcicAPI\obj\Debug\net8.0\UescColc.55B5B59F.Up2Date
 E:\WEB\backend-project-bimujudu\backend\UescColcicAPI\obj\Debug\net8.0\UescColcicAPI.genruntimeconfig.cache
 E:\WEB\backend-project-bimujudu\backend\UescColcicAPI\obj\Debug\net8.0\ref\UescColcicAPI.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Murilo\Desktop\Computaria\Facultaria\Web\bimujudu\backend\UescColcicAPI\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

@@ -3,3 +3,16 @@ ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /api/Professo
 ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /api/Professors, RequestTime: 22/10/2024 22:53:09, TotalProcessingTime: 1529ms
 ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /api/Professors, RequestTime: 22/10/2024 22:58:52, TotalProcessingTime: 1002ms
 ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /api/Professors, RequestTime: 22/10/2024 19:59:53, TotalProcessingTime: 955ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /, RequestTime: 31/10/2024 23:30:15, TotalProcessingTime: 5ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /swaggers, RequestTime: 31/10/2024 23:30:41, TotalProcessingTime: 0ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: POST, RequestUrl: /api/Users, RequestTime: 31/10/2024 23:33:36, TotalProcessingTime: 925ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: POST, RequestUrl: /api/Auth/login, RequestTime: 31/10/2024 23:34:07, TotalProcessingTime: 226ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: POST, RequestUrl: /api/Auth/login, RequestTime: 31/10/2024 23:34:19, TotalProcessingTime: 46ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: POST, RequestUrl: /api/Auth/login, RequestTime: 31/10/2024 23:47:54, TotalProcessingTime: 765ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: POST, RequestUrl: /api/Auth/login, RequestTime: 31/10/2024 23:55:42, TotalProcessingTime: 810ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: POST, RequestUrl: /api/Auth/login, RequestTime: 31/10/2024 23:57:55, TotalProcessingTime: 830ms
+ClientIp: ::1, HasJwtToken: False, RequestMethod: GET, RequestUrl: /, RequestTime: 01/11/2024 00:03:27, TotalProcessingTime: 0ms
+ClientIp: ::1, HasJwtToken: True, RequestMethod: GET, RequestUrl: //api/professors, RequestTime: 01/11/2024 00:04:40, TotalProcessingTime: 1ms
+ClientIp: ::1, HasJwtToken: True, RequestMethod: GET, RequestUrl: //api/Professors, RequestTime: 01/11/2024 00:04:52, TotalProcessingTime: 0ms
+ClientIp: ::1, HasJwtToken: True, RequestMethod: GET, RequestUrl: //api//Professors, RequestTime: 01/11/2024 00:04:59, TotalProcessingTime: 0ms
+ClientIp: ::1, HasJwtToken: True, RequestMethod: GET, RequestUrl: /api/Professors, RequestTime: 01/11/2024 00:05:13, TotalProcessingTime: 116ms

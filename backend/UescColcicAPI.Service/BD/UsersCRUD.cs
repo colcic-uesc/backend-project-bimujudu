@@ -53,4 +53,84 @@ public class UsersCRUD : IUsersCRUD
         return _context.Users.Include(s => s.Students).Include(p => p.Professors).FirstOrDefault(x => x.UserId == id);
     }
 
+    // Users -> professors
+    public bool AddProfessorToUser(int professorId, int userId)
+    {
+        var user = this.Find(userId);
+        var professor = _context.Professors.FirstOrDefault(s => s.ProfessorId == professorId);
+
+        if (professor is not null && user is not null)
+        {
+            user.Professors.Add(professor);
+            _context.SaveChanges();
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool RemoveProfessorFromUser(int professorId, int userid)
+    {
+        var user = this.Find(userid);
+        if (user is not null)
+        {
+            var professor = user.Professors.FirstOrDefault(s => s.ProfessorId == professorId);
+            if (professor is not null)
+            {
+                user.Professors.Remove(professor);
+                _context.SaveChanges();
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
+    public IEnumerable<Professor> ReadAllProfessorsOfUser(int userId)
+    {
+        var user = this.Find(userId);
+        return user?.Professors ?? Enumerable.Empty<Professor>();
+    }
+
+    // Users -> Students
+    public bool AddStudentToUser(int studentId, int userId)
+    {
+        var user = this.Find(userId);
+        var student = _context.Students.FirstOrDefault(s => s.StudentId == studentId);
+
+        if (student is not null && user is not null)
+        {
+            user.Students.Add(student);
+            _context.SaveChanges();
+            return true;
+        }
+
+        return false;
+    }
+
+    public bool RemoveStudentToUser(int studentId, int userid)
+    {
+        var user = this.Find(userid);
+        if (user is not null)
+        {
+            var student = user.Students.FirstOrDefault(s => s.StudentId == studentId);
+            if (student is not null)
+            {
+                user.Students.Remove(student);
+                _context.SaveChanges();
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+
+    public IEnumerable<Student> ReadAllStudentsOfUser(int userId)
+    {
+        var user = this.Find(userId);
+        return user?.Students ?? Enumerable.Empty<Student>();
+    }
+
 }

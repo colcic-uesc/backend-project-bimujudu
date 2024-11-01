@@ -4,11 +4,14 @@ using UescColcicAPI.Services.BD.Interfaces;
 using UescColcicAPI.Core;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace UescColcicAPI.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class ProfessorsController : ControllerBase
     {
         private readonly IProfessorCRUD _professorCRUD;

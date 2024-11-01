@@ -3,11 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 using UescColcicAPI.Services.BD.Interfaces;
 using UescColcicAPI.Core;
 using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Authorization;
 
 namespace UescColcicAPI.Controllers;
 
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class StudentsController : ControllerBase
     {
         private readonly IStudentsCRUD _studentsCRUD;
