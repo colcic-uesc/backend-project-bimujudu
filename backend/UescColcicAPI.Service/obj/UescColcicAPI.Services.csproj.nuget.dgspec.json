@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj": {}
+    "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj": {
+    "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj",
+        "projectUniqueName": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj",
         "projectName": "UescColcicAPI.Core",
-        "projectPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj",
-        "packagesPath": "C:\\Users\\Murilo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\obj\\",
+        "projectPath": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj",
+        "packagesPath": "C:\\Users\\Tksh\\.nuget\\packages\\",
+        "outputPath": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Murilo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Tksh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -62,17 +62,17 @@
         }
       }
     },
-    "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj": {
+    "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj",
+        "projectUniqueName": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj",
         "projectName": "UescColcicAPI.Services",
-        "projectPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj",
-        "packagesPath": "C:\\Users\\Murilo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Service\\obj\\",
+        "projectPath": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Service\\UescColcicAPI.Services.csproj",
+        "packagesPath": "C:\\Users\\Tksh\\.nuget\\packages\\",
+        "outputPath": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Murilo\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Tksh\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -84,8 +84,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj": {
-                "projectPath": "C:\\Users\\Murilo\\Desktop\\Computaria\\Facultaria\\Web\\bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj"
+              "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj": {
+                "projectPath": "E:\\WEB\\backend-project-bimujudu\\backend\\UescColcicAPI.Core\\UescColcicAPI.Core.csproj"
               }
             }
           }
