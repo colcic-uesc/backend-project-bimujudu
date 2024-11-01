@@ -139,7 +139,7 @@ namespace UescColcicAPI.Controllers
         }
 
         // Remove um Student do user
-        [HttpDelete("{userId}/stucent/{studentId}", Name = "RemoveStudentFromUser")]
+        [HttpDelete("{userId}/student/{studentId}", Name = "RemoveStudentFromUser")]
         [Authorize]
         public IActionResult RemoveStudentFromUser(int studentId, int userId)
         {
