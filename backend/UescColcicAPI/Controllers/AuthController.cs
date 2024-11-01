@@ -1,66 +1,42 @@
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Tokens;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
+using UescColcicAPI.Services.Auth;
 using UescColcicAPI.Services.BD.Interfaces;
-namespace UescColcicAPI.Controllers;
 
-[ApiController]
-[Route("api/[controller]")]
-public class AuthController : ControllerBase
+namespace UescColcicAPI.Controllers
 {
-    private readonly IConfiguration _configuration;
-    private readonly IUsersCRUD _usersCRUD; // Interface para acesso ao CRUD de usuários
-
-    public AuthController(IConfiguration configuration, IUsersCRUD usersCRUD)
+    [ApiController]
+    [Route("[controller]")]
+    public class AuthController : ControllerBase
     {
-        _configuration = configuration;
-        _usersCRUD = usersCRUD;
-    }
+        private readonly AuthService _authService;
+        private readonly IUsersCRUD _usersCRUD;
 
-    [HttpPost("login")]
-    public IActionResult Login([FromBody] LoginRequest request)
-    {
-        var user = _usersCRUD.ReadAll().FirstOrDefault(u => u.UserName == request.Username && u.Password == request.Password);
-
-        if (user == null)
+        public AuthController(AuthService authService, IUsersCRUD usersCRUD)
         {
-            return Unauthorized("Invalid username or password.");
+            _authService = authService;
+            _usersCRUD = usersCRUD;
         }
 
-        // Gerar o token JWT
-        var token = GenerateJwtToken();
-
-        return Ok(new { Token = token });
-    }
-
-    private string GenerateJwtToken()
-    {
-        var jwtSettings = _configuration.GetSection("Jwt");
-        var claims = new[]
+        [HttpPost("login")]
+        public IActionResult Login([FromBody] LoginRequest request)
         {
-            new Claim(JwtRegisteredClaimNames.Sub, "admin"),
-            new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
-        };
+            var user = _usersCRUD.ReadAll().FirstOrDefault(u => u.UserName == request.Username && u.Password == request.Password);
 
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]));
-        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+            if (user == null)
+            {
+                return Unauthorized("Invalid username or password.");
+            }
 
-        var token = new JwtSecurityToken(
-            issuer: jwtSettings["Issuer"],
-            audience: jwtSettings["Audience"],
-            claims: claims,
-            expires: DateTime.Now.AddMinutes(double.Parse(jwtSettings["ExpireMinutes"])),
-            signingCredentials: creds);
+            // Gerar o token JWT usando AuthService
+            var token = _authService.GenerateJwtToken();
 
-        return new JwtSecurityTokenHandler().WriteToken(token);
+            return Ok(new { Token = token });
+        }
     }
 
-}
-
-public class LoginRequest
-{
-    public string Username { get; set; }
-    public string Password { get; set; }
+    public class LoginRequest
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
+    }
 }
